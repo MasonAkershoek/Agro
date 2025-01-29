@@ -5,7 +5,7 @@
 #include <vector>
 #include <filesystem>
 #include <cstring>
-#include "../include/agroFuncs.hpp"
+#include "agroFuncs.hpp"
 
 // Constants
 const char* VERSION = "0.0.1";

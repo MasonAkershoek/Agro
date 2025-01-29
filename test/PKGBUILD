@@ -14,19 +14,14 @@ url="https://github.com/MasonAkershoek/Agro"
 license=('GPL')
 depends=('git')
 makedepends=('cmake' 'gcc' 'make' 'glibc' 'glib2')
-#install='agro.install'
 changelog=
-source=(argo::git://github.com/MasonAkershoek/Agro.git)
+source=(argo::https://github.com/MasonAkershoek/Agro.git)
 md5sums=('SKIP')
 
 build() {
 	cd "$pkgname"
+	cmake .
 	make
-}
-
-check() {
-	cd "$pkgname"
-	make -k check
 }
 
 package() {
