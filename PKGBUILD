@@ -6,7 +6,7 @@
 # Maintainer: Mason Akershoek <masonakershoek@gmail.com>
 pkgname='agro'
 pkgver=0.0.1
-pkgrel=1
+pkgrel=1makepkg not pulling my repo just makes a file
 epoch=
 pkgdesc="File agregation for the command line"
 arch=(x86_64)

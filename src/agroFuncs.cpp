@@ -13,6 +13,18 @@ string addHome(string path){
     return getenv("HOME") + path;
 }
 
+void remove(string agro, string folderPath){
+
+}
+
+void list(string agro){
+
+}
+
+void update(string agro){
+
+}
+
 bool searchAgroIncludes(string agro){
     ifstream file(".include");
     string line;
