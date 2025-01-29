@@ -10,17 +10,17 @@ pkgrel=1
 epoch=
 pkgdesc="File agregation for the command line"
 arch=(x86_64)
-url="https://github.com/MasonAkershoek/Agro"
+url="https://github.com/MasonAkershoek/agro"
 license=('GPL')
 depends=('git')
 makedepends=('cmake' 'gcc' 'make' 'glibc' 'glib2')
-#install='agro.install'
 changelog=
-source=(argo::git://github.com/MasonAkershoek/Agro.git)
+source=(argo::git+https://github.com/MasonAkershoek/agro.git)
 md5sums=('SKIP')
 
 build() {
 	cd "$pkgname"
+	cmake .
 	make
 }
 
