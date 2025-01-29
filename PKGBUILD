@@ -6,7 +6,7 @@
 # Maintainer: Mason Akershoek <masonakershoek@gmail.com>
 pkgname='agro'
 pkgver=0.0.1
-pkgrel=1makepkg not pulling my repo just makes a file
+pkgrel=1
 epoch=
 pkgdesc="File agregation for the command line"
 arch=(x86_64)
@@ -14,22 +14,18 @@ url="https://github.com/MasonAkershoek/agro"
 license=('GPL')
 depends=('git')
 makedepends=('cmake' 'gcc' 'make' 'glibc' 'glib2')
-changelog=
-source=(argo::git+https://github.com/MasonAkershoek/agro.git)
+source=(agro::git+https://github.com/MasonAkershoek/agro.git)
 md5sums=('SKIP')
 
 build() {
 	cd "$pkgname"
-	cmake .
+	cmake . 
 	make
 }
 
-check() {
-	cd "$pkgname"
-	make -k check
-}
 
 package() {
 	cd "$pkgname"
-	install -Dm755 ./agro "$pkgdir/usr/bin/agro"
+	ls
+	install -Dm755 build/agro "$pkgdir/usr/bin/agro"
 }
