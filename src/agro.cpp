@@ -20,9 +20,6 @@ int main(int argc, char* argv[]){
     checkDotFolder();
     cout << "cwd: " << filesystem::current_path() << endl;
 
-    cout << getAgroPath("mason") << endl;
-    exit(0);
-
     // Error checking
     if (argc <= 1){
         cout << "Must provide at lease one command!" << endl;
