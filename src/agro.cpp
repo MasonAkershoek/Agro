@@ -269,6 +269,10 @@ void initGit(){
         branch = "main";
     }
     system("git init");
+    system("echo '# My Agro' > README.md");
+    system("git add README.md");
+    system("git add .");
+    system("git commit -m 'Initial commit'");
     system(("git remote add origin " + gitURL).c_str());
     system(("git push -u origin " + branch).c_str());
     cout << "Git repository initialized!" << endl;
