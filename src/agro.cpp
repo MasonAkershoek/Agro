@@ -6,9 +6,11 @@
 #include <filesystem>
 #include <cstring>
 #include "agroFuncs.hpp"
+#include "test.cpp"
 
 // Constants
 const char* VERSION = "0.0.1";
+const bool TESTING = true;
 
 using namespace std;
 
@@ -17,6 +19,14 @@ void version(){
 }
 
 int main(int argc, char* argv[]){
+    cout << DOTFOLDER << endl;
+    // Check for testing
+    if (TESTING){
+        test();
+        cout << "Testing Complete!" << endl;
+        exit(0);
+    }
+
     checkDotFolder();
     cout << "cwd: " << filesystem::current_path() << endl;
 
@@ -74,7 +84,7 @@ int main(int argc, char* argv[]){
         
     }
     if (strcmp(argv[1], "list") == 0){
-        list(argv[3]);
+        //list();
     }
     if (strcmp(argv[1], "update") == 0){
         
